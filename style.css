@@ -5,70 +5,49 @@
 }
 
 body {
-  min-height: 100vh;
   font-family: "Poppins", sans-serif;
   transition: all 1s ease-in-out;
   overflow: hidden;
-}
-
-h1 {
-  font-size: 3rem;
-  color: rgb(49, 49, 49);
-}
-p {
-  font-size: 1.25rem;
-  color: rgb(71, 71, 71);
-}
-
-header,
-form {
-  min-height: 25vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header {
-  flex-direction: column;
-  margin-top: 5em;
+  height: 100vh;
+  display: grid;
+  place-items: center;
   text-align: center;
 }
 
-form button,
-form input {
-  border: 1px solid rgb(94, 94, 94);
+.container p {
+  font-size: 1.75rem;
+  color: rgb(41, 41, 41);
+  margin: auto;
+  padding-bottom: 1em;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .container p {
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+.color-input {
+  padding: 1em;
+  border: 1px solid rgb(190, 190, 190);
   outline: none;
-  padding: 1rem;
-  font-size: 1.5rem;
+  border-radius: 2px;
+  text-transform: uppercase;
 }
 
-form input {
-  border-right: none;
-}
-
-form button {
-  border-left: none;
-  background-color: white;
+.form button {
+  padding: 1em;
+  outline: none;
   cursor: pointer;
-  transition: all 0.5s ease;
+  border-radius: 2px;
+  border: 1px solid rgb(190, 190, 190);
+  background-color: white;
+  transition: all 0.3s ease;
 }
 
-form button:hover {
-  background-color: #000;
+.form button:hover {
+  background-color: black;
   color: #fff;
-}
-
-@media (max-width: 425px) {
-  form button,
-  form input {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-  }
 }
